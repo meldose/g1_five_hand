@@ -1,0 +1,8 @@
+numpy==1.26.4
+dexpilot==0.4.6
+sapien==3.0.0b0
+pyyaml
+tyro  
+loguru
+mediapipe
+git+https://github.com/UniBwTAS/ccma.git#egg=ccma # ccma library

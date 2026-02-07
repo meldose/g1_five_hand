@@ -1,0 +1,23 @@
+# config for realtime_retargeting_ros.py
+robot_dir: /home/jeremy.ong/ros2_ws/src/humanoid_hand/dex_retargeting_wrapper/dex_retargeting_wrapper/dex_retargeting/assets/robots/hands
+robot_name: inspire
+optimizer: dexpilot
+hand_type: right
+camera_topic: "camera/camera/color/image_raw"
+
+# config for hand_test.py & utils.py
+finger_range:
+  pinky_proximal_joint: [0.57, 1.47]
+  ring_proximal_joint: [0.2, 1.47]
+  middle_proximal_joint: [0.2, 1.47]
+  index_proximal_joint: [0.2, 1.47]
+  thumb_proximal_yaw_joint: [0, 0.3]
+  thumb_proximal_pitch_joint: [0, 1.308]
+
+threshold: 20 # controls the jitterness of the fingers. (Range from 0 - 1000)
+buffer_size: 10 # controls the number of data points to store in the buffer for CCMA smoothing
+tolerance: 20 # used to calculate the angle difference between set angle and current angle. If the difference is less than tolerance, it is considered as reached. Range (0 - 1000)
+
+MODBUS_IP: "192.168.11.210"
+MODBUS_PORT: 6000
+  
